@@ -28,7 +28,7 @@ const Index = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Dados de mercado direto no Whatsapp. Rapidez e amplitude que só a IA da Duop te possibilita.
+              Dados de mercado no Whatsapp. Rapidez que só a IA da Duop te possibilita.
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
