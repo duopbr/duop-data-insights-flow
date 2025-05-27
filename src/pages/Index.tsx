@@ -40,7 +40,7 @@ const Index = () => {
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Falar com Especialista no WhatsApp
               </Button>
-              <p className="text-gray-400 text-sm">✨ Demonstração gratuita em 5 minutos</p>
+              <p className="text-gray-400 text-sm">✨ Demonstração gratuita</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
