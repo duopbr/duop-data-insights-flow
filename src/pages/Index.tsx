@@ -18,7 +18,7 @@ const Index = () => {
         <div className="relative container mx-auto px-4 py-20 lg:py-32">
           {/* Logo no canto superior esquerdo */}
           <div className="absolute top-8 left-8">
-            <img src="/duop-logo.png" alt="Duop" className="w-12 h-12" />
+            <img src="/duop-logo.png" alt="Duop" className="w-auto h-8" />
           </div>
           
           <div className="max-w-4xl mx-auto text-center">
@@ -406,7 +406,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="flex items-center justify-center mb-2">
-              <img src="/duop-logo.png" alt="Duop" className="w-10 h-10 mr-2" />
+              <img src="/duop-logo.png" alt="Duop" className="w-auto h-8" />
             </div>
             <p className="text-gray-400 mb-4">Inteligência Artificial para Decisões de Investimento</p>
             <p className="text-gray-500 text-sm">© 2024 Duop. Todos os direitos reservados.</p>
