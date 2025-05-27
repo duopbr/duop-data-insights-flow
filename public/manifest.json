@@ -1,0 +1,17 @@
+{
+  "name": "Duop - IA para Investimentos",
+  "short_name": "Duop",
+  "description": "Inteligência Artificial para decisões de investimento mais inteligentes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00B4E5",
+  "theme_color": "#00B4E5",
+  "icons": [
+    {
+      "src": "/duop-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+} 
