@@ -1,3 +1,4 @@
+
 import { ArrowDown, ArrowUp, TrendingUp, BarChart3, Zap, Target, Clock, Brain, MessageCircle, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -277,20 +278,20 @@ const Index = () => {
                     <BarChart3 className="w-10 h-10 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Investidores que Amam Dados</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-200 mb-6 leading-relaxed">
                     Você busca informações detalhadas antes de investir e não se satisfaz com análises superficiais
                   </p>
                   <div className="space-y-2 text-left">
-                    <div className="flex items-center text-blue-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
                       <span>Analisa múltiplos indicadores</span>
                     </div>
-                    <div className="flex items-center text-blue-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
                       <span>Compara ativos em detalhes</span>
                     </div>
-                    <div className="flex items-center text-blue-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
                       <span>Acompanha fatos relevantes</span>
                     </div>
                   </div>
@@ -303,20 +304,20 @@ const Index = () => {
                     <Clock className="w-10 h-10 text-emerald-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Analistas Eficientes</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-200 mb-6 leading-relaxed">
                     Profissionais que querem otimizar seu tempo de análise sem perder qualidade nas decisões
                   </p>
                   <div className="space-y-2 text-left">
-                    <div className="flex items-center text-emerald-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-400" />
                       <span>Economiza horas de pesquisa</span>
                     </div>
-                    <div className="flex items-center text-emerald-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-400" />
                       <span>Centraliza informações</span>
                     </div>
-                    <div className="flex items-center text-emerald-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-400" />
                       <span>Automatiza relatórios</span>
                     </div>
                   </div>
@@ -329,20 +330,20 @@ const Index = () => {
                     <TrendingUp className="w-10 h-10 text-purple-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Entusiastas de FIIs</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-200 mb-6 leading-relaxed">
                     Especialistas em renda fixa que querem expandir horizontes com inteligência artificial
                   </p>
                   <div className="space-y-2 text-left">
-                    <div className="flex items-center text-purple-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
                       <span>Análise profunda de FIIs</span>
                     </div>
-                    <div className="flex items-center text-purple-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
                       <span>Segmentação automática</span>
                     </div>
-                    <div className="flex items-center text-purple-300 text-sm">
-                      <CheckCircle className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-white text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
                       <span>Tendências do setor</span>
                     </div>
                   </div>
