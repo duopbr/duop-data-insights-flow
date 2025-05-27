@@ -1,4 +1,3 @@
-
 import { ArrowDown, ArrowUp, TrendingUp, BarChart3, Zap, Target, Clock, Brain, MessageCircle, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -258,32 +257,112 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Target Audience */}
+      {/* Target Audience - Enhanced Section */}
       <section className="py-20 bg-slate-800">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              Para Quem é a Duop?
-            </h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Para Quem é a Duop?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Desenvolvida especialmente para investidores que valorizam dados detalhados e análises profundas
+              </p>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <Card className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 border-blue-500/30 p-6">
-                <BarChart3 className="w-12 h-12 text-blue-400 mb-4 mx-auto" />
-                <h3 className="text-lg font-semibold text-white mb-3">Investidores que Amam Dados</h3>
-                <p className="text-gray-300">Você busca informações detalhadas antes de investir</p>
+              <Card className="bg-gradient-to-br from-blue-500/10 to-blue-600/20 border-blue-500/30 p-8 hover:from-blue-500/20 hover:to-blue-600/30 transition-all duration-300 transform hover:scale-105">
+                <div className="text-center">
+                  <div className="bg-blue-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <BarChart3 className="w-10 h-10 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">Investidores que Amam Dados</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Você busca informações detalhadas antes de investir e não se satisfaz com análises superficiais
+                  </p>
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center text-blue-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Analisa múltiplos indicadores</span>
+                    </div>
+                    <div className="flex items-center text-blue-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Compara ativos em detalhes</span>
+                    </div>
+                    <div className="flex items-center text-blue-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Acompanha fatos relevantes</span>
+                    </div>
+                  </div>
+                </div>
               </Card>
               
-              <Card className="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 border-emerald-500/30 p-6">
-                <Clock className="w-12 h-12 text-emerald-400 mb-4 mx-auto" />
-                <h3 className="text-lg font-semibold text-white mb-3">Analistas Eficientes</h3>
-                <p className="text-gray-300">Profissionais que querem otimizar seu tempo de análise</p>
+              <Card className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/20 border-emerald-500/30 p-8 hover:from-emerald-500/20 hover:to-emerald-600/30 transition-all duration-300 transform hover:scale-105">
+                <div className="text-center">
+                  <div className="bg-emerald-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <Clock className="w-10 h-10 text-emerald-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">Analistas Eficientes</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Profissionais que querem otimizar seu tempo de análise sem perder qualidade nas decisões
+                  </p>
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center text-emerald-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Economiza horas de pesquisa</span>
+                    </div>
+                    <div className="flex items-center text-emerald-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Centraliza informações</span>
+                    </div>
+                    <div className="flex items-center text-emerald-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Automatiza relatórios</span>
+                    </div>
+                  </div>
+                </div>
               </Card>
               
-              <Card className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border-purple-500/30 p-6">
-                <TrendingUp className="w-12 h-12 text-purple-400 mb-4 mx-auto" />
-                <h3 className="text-lg font-semibold text-white mb-3">Entusiastas de FIIs</h3>
-                <p className="text-gray-300">Especialistas em renda fixa que querem ir além</p>
+              <Card className="bg-gradient-to-br from-purple-500/10 to-purple-600/20 border-purple-500/30 p-8 hover:from-purple-500/20 hover:to-purple-600/30 transition-all duration-300 transform hover:scale-105">
+                <div className="text-center">
+                  <div className="bg-purple-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <TrendingUp className="w-10 h-10 text-purple-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">Entusiastas de FIIs</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Especialistas em renda fixa que querem expandir horizontes com inteligência artificial
+                  </p>
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center text-purple-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Análise profunda de FIIs</span>
+                    </div>
+                    <div className="flex items-center text-purple-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Segmentação automática</span>
+                    </div>
+                    <div className="flex items-center text-purple-300 text-sm">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      <span>Tendências do setor</span>
+                    </div>
+                  </div>
+                </div>
               </Card>
+            </div>
+
+            <div className="text-center">
+              <p className="text-lg text-gray-300 mb-8">
+                <strong className="text-white">Reconhece seu perfil?</strong> A Duop foi criada pensando exatamente em você.
+              </p>
+              <Button 
+                onClick={() => handleWhatsAppClick('target-audience')}
+                id="cta-target-audience"
+                size="lg" 
+                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Quero Conhecer a Duop Agora
+              </Button>
             </div>
           </div>
         </div>
