@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="pt-BR">
       <Head>
-        {/* Google Tag Manager - deve ser o primeiro script no head */}
+        {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -14,15 +14,15 @@ export default function Document() {
             })(window,document,'script','dataLayer','GTM-MR8FFBCV');`
           }}
         />
+        {/* End Google Tag Manager */}
       </Head>
       <body>
-        {/* Google Tag Manager (noscript) - primeiro elemento após abertura do body */}
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR8FFBCV"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>`
-          }}
-        />
+        {/* Google Tag Manager (noscript) */}
+        <noscript dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR8FFBCV"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+        }} />
+        {/* End Google Tag Manager (noscript) */}
         <Main />
         <NextScript />
       </body>
