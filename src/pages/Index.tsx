@@ -194,10 +194,82 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white/5 border-white/10 p-6 hover:bg-white/10 transition-all duration-300">
-              <CheckCircle className="w-12 h-12 text-emerald-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-3">Decisões Mais Confiantes</h3>
-              <p className="text-gray-300">Tome decisões de investimento com mais embasamento e segurança</p>
+            <Card className="bg-white/10 backdrop-blur-sm p-8 hover:bg-white/20 transition-all duration-300">
+              <div className="text-center">
+                <div className="bg-blue-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <BarChart3 className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Investidores que Amam Dados</h3>
+                <p className="text-white text-lg mb-8">
+                  Você busca informações detalhadas antes de investir e não se satisfaz com análises superficiais
+                </p>
+                <div className="space-y-4 text-left">
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-blue-400" />
+                    <span className="text-white text-lg">Analisa múltiplos indicadores</span>
+                  </div>
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-blue-400" />
+                    <span className="text-white text-lg">Compara ativos em detalhes</span>
+                  </div>
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-blue-400" />
+                    <span className="text-white text-lg">Acompanha fatos relevantes</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm p-8 hover:bg-white/20 transition-all duration-300">
+              <div className="text-center">
+                <div className="bg-emerald-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Clock className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Analistas Eficientes</h3>
+                <p className="text-white text-lg mb-8">
+                  Profissionais que querem otimizar seu tempo de análise sem perder qualidade nas decisões
+                </p>
+                <div className="space-y-4 text-left">
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-emerald-400" />
+                    <span className="text-white text-lg">Economiza horas de pesquisa</span>
+                  </div>
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-emerald-400" />
+                    <span className="text-white text-lg">Centraliza informações</span>
+                  </div>
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-emerald-400" />
+                    <span className="text-white text-lg">Automatiza relatórios</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm p-8 hover:bg-white/20 transition-all duration-300">
+              <div className="text-center">
+                <div className="bg-purple-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <TrendingUp className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Entusiastas de FIIs</h3>
+                <p className="text-white text-lg mb-8">
+                  Especialistas em renda fixa que querem expandir horizontes com inteligência artificial
+                </p>
+                <div className="space-y-4 text-left">
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-purple-400" />
+                    <span className="text-white text-lg">Análise profunda de FIIs</span>
+                  </div>
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-purple-400" />
+                    <span className="text-white text-lg">Segmentação automática</span>
+                  </div>
+                  <div className="flex items-center bg-white/10 rounded-lg p-3">
+                    <CheckCircle className="w-6 h-6 mr-3 text-purple-400" />
+                    <span className="text-white text-lg">Tendências do setor</span>
+                  </div>
+                </div>
+              </div>
             </Card>
             
             <Card className="bg-white/5 border-white/10 p-6 hover:bg-white/10 transition-all duration-300">
@@ -313,6 +385,70 @@ const Index = () => {
                 <Star className="w-5 h-5 fill-current" />
                 <Star className="w-5 h-5 fill-current" />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quem Somos Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/50 to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Quem Somos
+            </h2>
+            <p className="text-xl text-gray-300">
+              Conheça os sócios por trás da Duop
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Rodrigo Lamas */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300">
+              <div className="aspect-[4/5] mb-6 overflow-hidden rounded-xl">
+                <img 
+                  src="/Lamas.png" 
+                  alt="Rodrigo Lamas" 
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Rodrigo Lamas</h3>
+              <p className="text-blue-400 font-medium mb-4">Sócio Fundador</p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Engenheiro pelo ITA e matemática pela UFJF. Mestre em Economia e finanças pela FGV EPGE e doutor em Administração pela FGV EBAPE. Sócio fundador da Rede de Ensino Apogeu, responsável pela M&A entre o Grupo PENSI de Ensino e Gera Venture Capital que criou a Holding Eleva de Educação.
+              </p>
+            </div>
+
+            {/* Philippe Drevon */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300">
+              <div className="aspect-[4/5] mb-6 overflow-hidden rounded-xl">
+                <img 
+                  src="/Lipe.png" 
+                  alt="Philippe Drevon" 
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Philippe Drevon</h3>
+              <p className="text-emerald-400 font-medium mb-4">Sócio</p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Engenheiro pela Puc RJ. Mestre em Economia e finanças pela EPGE FGV. 12 anos no mercado financeiro, 9 anos na gestão de fundos multimercados.
+              </p>
+            </div>
+
+            {/* Gustavo Teixeira */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300">
+              <div className="aspect-[4/5] mb-6 overflow-hidden rounded-xl">
+                <img 
+                  src="/Teix.png" 
+                  alt="Gustavo Teixeira" 
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Gustavo Teixeira, CFA</h3>
+              <p className="text-purple-400 font-medium mb-4">Sócio</p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Engenheiro pela Puc RJ. 14 anos no mercado financeiro, 9 anos na gestão de fundos multimercados e 5 anos em assessoria de investimentos.
+              </p>
             </div>
           </div>
         </div>
