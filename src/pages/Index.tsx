@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUp, TrendingUp, BarChart3, Zap, Target, Clock, Brain, MessageCircle, CheckCircle } from 'lucide-react';
+import { ArrowDown, ArrowUp, TrendingUp, BarChart3, Zap, Target, Clock, Brain, MessageCircle, CheckCircle, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -229,6 +229,91 @@ const Index = () => {
               <h3 className="text-lg font-semibold text-white mb-3">Análise Avançada</h3>
               <p className="text-gray-300">Ferramentas de comparação e análise de performance</p>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Feedbacks Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/50 to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              O Que Nossos Usuários Dizem
+            </h2>
+            <p className="text-xl text-gray-300">
+              Experiências reais de quem já utiliza nossa IA
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Feedback 1 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl">
+                  R
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">Ricardo M.</h4>
+                  <p className="text-gray-400 text-sm">Investidor Profissional</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                "A rapidez com que recebo informações relevantes no WhatsApp mudou completamente minha forma de investir. Consigo tomar decisões muito mais embasadas agora."
+              </p>
+              <div className="flex text-yellow-400">
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+              </div>
+            </div>
+
+            {/* Feedback 2 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-emerald-500/30 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl">
+                  A
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">Ana P.</h4>
+                  <p className="text-gray-400 text-sm">Analista de FIIs</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                "A análise profunda dos FIIs é impressionante. A IA consegue identificar padrões e oportunidades que eu levaria dias para encontrar manualmente."
+              </p>
+              <div className="flex text-yellow-400">
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+              </div>
+            </div>
+
+            {/* Feedback 3 */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-purple-500/30 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl">
+                  M
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-white font-semibold">Marcos S.</h4>
+                  <p className="text-gray-400 text-sm">Gestor de Carteira</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                "Economizo horas de análise com as informações centralizadas. A interpretação dos fatos relevantes pela IA é um diferencial incrível."
+              </p>
+              <div className="flex text-yellow-400">
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
