@@ -2,16 +2,49 @@ import { ArrowDown, ArrowUp, TrendingUp, BarChart3, Zap, Target, Clock, Brain, M
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 const Index = () => {
   const whatsappLink = "https://wa.me/5521967135336?text=Olá! Gostaria de saber mais sobre a IA da Duop para investimentos.";
 
   const handleWhatsAppClick = (section: string) => {
+    // Enviar evento para o GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'whatsapp_click',
+      button_section: section,
+      button_id: `cta-${section}`,
+      button_text: 'WhatsApp',
+      button_url: whatsappLink
+    });
+    
     console.log(`WhatsApp CTA clicked from: ${section}`);
     window.open(whatsappLink, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button
+          onClick={() => handleWhatsAppClick('floating')}
+          id="cta-floating-whatsapp"
+          size="lg"
+          className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 sm:w-auto sm:h-auto sm:px-6 sm:py-3 group"
+        >
+          <MessageCircle className="w-8 h-8 sm:w-5 sm:h-5 sm:mr-2" />
+          <span className="hidden sm:inline">Fale Conosco</span>
+          {/* Tooltip para mobile */}
+          <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-800 text-white px-3 py-1 rounded-md text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none sm:hidden">
+            Fale Conosco
+          </span>
+        </Button>
+      </div>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-emerald-600/20"></div>
@@ -45,9 +78,9 @@ const Index = () => {
                 onClick={() => handleWhatsAppClick('hero-primary')}
                 id="cta-hero-primary"
                 size="lg" 
-                className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-4 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 whitespace-normal sm:whitespace-nowrap"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                 Falar com Especialista no WhatsApp
               </Button>
               <p className="text-gray-400 text-sm">✨ Demonstração gratuita</p>
@@ -589,9 +622,9 @@ const Index = () => {
                 onClick={() => handleWhatsAppClick('target-audience')}
                 id="cta-target-audience"
                 size="lg" 
-                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-4 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 whitespace-normal sm:whitespace-nowrap"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                 Quero Conhecer a Duop Agora
               </Button>
             </div>
@@ -614,9 +647,9 @@ const Index = () => {
               onClick={() => handleWhatsAppClick('final-cta')}
               id="cta-final"
               size="lg" 
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4"
+              className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 px-4 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 whitespace-normal sm:whitespace-nowrap"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
               Quero uma Demonstração da IA (WhatsApp)
             </Button>
             
