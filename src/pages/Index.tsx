@@ -1,3 +1,4 @@
+
 import { ArrowDown, ArrowUp, TrendingUp, BarChart3, Zap, Target, Clock, Brain, MessageCircle, CheckCircle, Star, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -39,7 +40,7 @@ const Index = () => {
           onClick={() => handleWhatsAppClick('floating')}
           id="cta-floating-whatsapp"
           size="lg"
-          className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 hover:rotate-3 sm:w-auto sm:h-auto sm:px-6 sm:py-3 group animate-pulse hover:animate-none"
+          className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 hover:rotate-3 sm:w-auto sm:h-auto sm:px-6 sm:py-3 group"
         >
           <MessageCircle className="w-8 h-8 sm:w-5 sm:h-5 sm:mr-2 animate-bounce" />
           <span className="hidden sm:inline">Fale Conosco</span>
