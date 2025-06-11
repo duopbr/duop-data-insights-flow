@@ -1,4 +1,3 @@
-
 import { ArrowDown, ArrowUp, TrendingUp, BarChart3, Zap, Target, Clock, Brain, MessageCircle, CheckCircle, Star, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -13,7 +12,7 @@ declare global {
 }
 
 const Index = () => {
-  const whatsappLink = "https://wa.me/5521967135336?text=Olá! Gostaria de saber mais sobre a IA da Duop para investimentos.";
+  const whatsappLink = "https://wa.me/5521998883771?text=Olá! Gostaria de saber mais sobre a IA da Duop para investimentos.";
 
   const handleWhatsAppClick = (section: string) => {
     // Enviar evento para o GTM
@@ -329,7 +328,7 @@ const Index = () => {
                     <div className="bg-purple-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse">
                       <TrendingUp className="w-10 h-10 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Entusiastas de FIIs</h3>
+                    <h3 className="text-2xl font-bold text-white mb-8">Entusiastas de FIIs</h3>
                     <p className="text-white text-lg mb-8">
                       Especialistas em renda fixa que querem expandir horizontes com inteligência artificial
                     </p>
