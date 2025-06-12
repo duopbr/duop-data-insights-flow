@@ -1,3 +1,4 @@
+
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FloatingElements } from '@/components/FloatingElements';
@@ -24,18 +25,27 @@ const Index = () => {
   const [currentButtonSection, setCurrentButtonSection] = useState('');
 
   const handleButtonClick = (section: string) => {
-    // Enviar evento para o GTM
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'contact_form_open',
-      button_section: section,
-      button_id: `cta-${section}`,
-      button_text: 'Abrir Formulário'
-    });
+    console.log(`Button clicked from section: ${section}`);
     
-    console.log(`Contact form opened from: ${section}`);
+    // Enviar evento para o GTM
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'contact_form_open',
+        button_section: section,
+        button_id: `cta-${section}`,
+        button_text: 'Abrir Formulário'
+      });
+    }
+    
     setCurrentButtonSection(section);
     setIsContactFormOpen(true);
+  };
+
+  const closeContactForm = () => {
+    console.log('Closing contact form');
+    setIsContactFormOpen(false);
+    setCurrentButtonSection('');
   };
 
   return (
@@ -45,7 +55,7 @@ const Index = () => {
       {/* Contact Form Modal */}
       <ContactForm 
         isOpen={isContactFormOpen}
-        onClose={() => setIsContactFormOpen(false)}
+        onClose={closeContactForm}
         buttonSection={currentButtonSection}
       />
       
@@ -361,8 +371,6 @@ const Index = () => {
                   Desenvolvida especialmente para investidores que valorizam dados detalhados e análises profundas
                 </p>
               </div>
-              
-              {/* Target audience cards are already included in the benefits section above */}
 
               <ScrollReveal delay={800}>
                 <div className="text-center">
