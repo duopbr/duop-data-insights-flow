@@ -84,6 +84,13 @@ const ContactForm = ({ isOpen, onClose, buttonSection }: ContactFormProps) => {
     return Object.keys(newErrors).length === 0;
   };
 
+  const redirectToWhatsApp = () => {
+    const phoneNumber = '5521998883771';
+    const message = encodeURIComponent('Olá! Acabei de preencher o formulário e gostaria de saber mais sobre a Duop.');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -102,7 +109,7 @@ const ContactForm = ({ isOpen, onClose, buttonSection }: ContactFormProps) => {
           Patrimonio: patrimonio,
           'Investir Mês': valorMensal,
           'Ja foi contatado?': 'Não',
-          plan_title: `Contato via ${buttonSection}`
+          plan_title: 'dadosdomercado'
         });
 
       if (error) {
@@ -124,7 +131,7 @@ const ContactForm = ({ isOpen, onClose, buttonSection }: ContactFormProps) => {
         });
       }
 
-      alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+      alert('Formulário enviado com sucesso! Você será redirecionado para o WhatsApp.');
       
       // Limpar formulário e fechar modal
       setEmail('');
@@ -133,6 +140,12 @@ const ContactForm = ({ isOpen, onClose, buttonSection }: ContactFormProps) => {
       setValorMensal('');
       setErrors({});
       onClose();
+
+      // Redirecionar para WhatsApp após um pequeno delay
+      setTimeout(() => {
+        redirectToWhatsApp();
+      }, 1000);
+      
     } catch (error) {
       console.error('Erro inesperado:', error);
       alert('Erro inesperado. Tente novamente.');
