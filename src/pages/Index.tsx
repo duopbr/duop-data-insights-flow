@@ -4,6 +4,8 @@ import { Card } from '@/components/ui/card';
 import { AnimatedCounter } from '@/components/AnimatedCounter';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { FloatingElements } from '@/components/FloatingElements';
+import ContactForm from '@/components/ContactForm';
+import { useState } from 'react';
 
 declare global {
   interface Window {
@@ -12,32 +14,40 @@ declare global {
 }
 
 const Index = () => {
-  const whatsappLink = "https://wa.me/5521998883771?text=Olá! Gostaria de saber mais sobre a IA da Duop para investimentos.";
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [currentButtonSection, setCurrentButtonSection] = useState('');
 
-  const handleWhatsAppClick = (section: string) => {
+  const handleButtonClick = (section: string) => {
     // Enviar evento para o GTM
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'whatsapp_click',
+      event: 'contact_form_open',
       button_section: section,
       button_id: `cta-${section}`,
-      button_text: 'WhatsApp',
-      button_url: whatsappLink
+      button_text: 'Abrir Formulário'
     });
     
-    console.log(`WhatsApp CTA clicked from: ${section}`);
-    window.open(whatsappLink, '_blank');
+    console.log(`Contact form opened from: ${section}`);
+    setCurrentButtonSection(section);
+    setIsContactFormOpen(true);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative">
       <FloatingElements />
       
-      {/* Floating WhatsApp Button */}
+      {/* Contact Form Modal */}
+      <ContactForm 
+        isOpen={isContactFormOpen}
+        onClose={() => setIsContactFormOpen(false)}
+        buttonSection={currentButtonSection}
+      />
+      
+      {/* Floating Contact Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button
-          onClick={() => handleWhatsAppClick('floating')}
-          id="cta-floating-whatsapp"
+          onClick={() => handleButtonClick('floating')}
+          id="cta-floating-contact"
           size="lg"
           className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 hover:rotate-3 sm:w-auto sm:h-auto sm:px-6 sm:py-3 group"
         >
@@ -88,13 +98,13 @@ const Index = () => {
             <ScrollReveal delay={800}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <Button 
-                  onClick={() => handleWhatsAppClick('hero-primary')}
+                  onClick={() => handleButtonClick('hero-primary')}
                   id="cta-hero-primary"
                   size="lg" 
                   className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-4 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 whitespace-normal sm:whitespace-nowrap group"
                 >
                   <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0 group-hover:animate-bounce" />
-                  Falar com Especialista no WhatsApp
+                  Falar com Especialista
                 </Button>
                 <p className="text-gray-400 text-sm animate-pulse">✨ Demonstração gratuita</p>
               </div>
@@ -707,7 +717,7 @@ const Index = () => {
                     <strong className="text-white">Reconhece seu perfil?</strong> A Duop foi criada pensando exatamente em você.
                   </p>
                   <Button 
-                    onClick={() => handleWhatsAppClick('target-audience')}
+                    onClick={() => handleButtonClick('target-audience')}
                     id="cta-target-audience"
                     size="lg" 
                     className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-4 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 whitespace-normal sm:whitespace-nowrap group"
@@ -732,17 +742,17 @@ const Index = () => {
                 Pronto para Revolucionar seus Investimentos?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto hover:text-white transition-colors duration-300">
-                Seja um dos primeiros a experimentar a IA da Duop. Conversação gratuita no WhatsApp.
+                Seja um dos primeiros a experimentar a IA da Duop. Conversação gratuita.
               </p>
               
               <Button 
-                onClick={() => handleWhatsAppClick('final-cta')}
+                onClick={() => handleButtonClick('final-cta')}
                 id="cta-final"
                 size="lg" 
                 className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 px-4 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 mb-4 whitespace-normal sm:whitespace-nowrap group"
               >
                 <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0 group-hover:animate-bounce" />
-                Quero uma Demonstração da IA (WhatsApp)
+                Quero uma Demonstração da IA
               </Button>
               
               <p className="text-blue-100 text-sm hover:text-white transition-colors duration-300">
